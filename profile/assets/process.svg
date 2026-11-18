@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 230" width="1200" height="230" role="img" aria-labelledby="t d">
+  <title id="t">How TrustEngineers works</title>
+  <desc id="d">Four steps in order: fixed milestones, written daily updates, independent QA, and scope changes flagged before we build. A light travels along the line from step one to step four.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071229"/>
+      <stop offset="1" stop-color="#0a1833"/>
+    </linearGradient>
+    <!-- userSpaceOnUse: a horizontal line has no bounding-box height, so a relative gradient would not paint -->
+    <linearGradient id="brand" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="1050" y2="0">
+      <stop offset="0" stop-color="#8aaeff"/>
+      <stop offset="1" stop-color="#ff6b6b"/>
+    </linearGradient>
+    <radialGradient id="spark">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".35" stop-color="#8aaeff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#8aaeff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    text { font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; text-anchor: middle; }
+    .track { stroke: #8caaeb; stroke-opacity: .22; stroke-width: 2; }
+    .fill { stroke: url(#brand); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 900; stroke-dashoffset: 0; animation: draw 8s linear infinite; }
+    .spark { opacity: 0; animation: travel 8s linear infinite; }
+    .node { fill: #0f1f3f; stroke: #8caaeb; stroke-opacity: .5; stroke-width: 2; }
+    .halo { fill: none; stroke: #8aaeff; stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; animation: ping 8s ease-out infinite; }
+    .n { font-size: 19px; font-weight: 700; fill: #8aaeff; }
+    .h { font-size: 20px; font-weight: 600; fill: #eef2fb; }
+    .s { font-size: 15.5px; fill: #a8b4cc; }
+    .s1 { animation-delay: 0s; } .s2 { animation-delay: 2s; } .s3 { animation-delay: 4s; } .s4 { animation-delay: 6s; }
+    @keyframes draw {
+      0% { stroke-dashoffset: 900; }
+      75%, 92% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 0; opacity: 0; }
+    }
+    @keyframes travel {
+      0% { transform: translateX(0); opacity: 0; }
+      3% { opacity: 1; }
+      75% { transform: translateX(900px); opacity: 1; }
+      80%, 100% { transform: translateX(900px); opacity: 0; }
+    }
+    @keyframes ping {
+      0% { transform: scale(1); opacity: .9; }
+      18% { transform: scale(1.9); opacity: 0; }
+      100% { transform: scale(1.9); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .spark { display: none; } }
+  </style>
+
+  <rect width="1200" height="230" rx="22" fill="url(#bg)"/>
+  <rect x=".5" y=".5" width="1199" height="229" rx="21.5" fill="none" stroke="#8caaeb" stroke-opacity=".18"/>
+
+  <line class="track" x1="150" y1="70" x2="1050" y2="70"/>
+  <line class="fill" x1="150" y1="70" x2="1050" y2="70"/>
+  <circle class="spark" cx="150" cy="70" r="16" fill="url(#spark)"/>
+
+  <g>
+    <circle class="halo s1" cx="150" cy="70" r="24"/>
+    <circle class="node" cx="150" cy="70" r="24"/>
+    <text class="n" x="150" y="77">1</text>
+    <text class="h" x="150" y="132">Fixed milestones</text>
+    <text class="s" x="150" y="160">Each one has a clear scope</text>
+    <text class="s" x="150" y="182">and a fixed price.</text>
+  </g>
+  <g>
+    <circle class="halo s2" cx="450" cy="70" r="24"/>
+    <circle class="node" cx="450" cy="70" r="24"/>
+    <text class="n" x="450" y="77">2</text>
+    <text class="h" x="450" y="132">Written daily updates</text>
+    <text class="s" x="450" y="160">You always know where</text>
+    <text class="s" x="450" y="182">your project stands.</text>
+  </g>
+  <g>
+    <circle class="halo s3" cx="750" cy="70" r="24"/>
+    <circle class="node" cx="750" cy="70" r="24"/>
+    <text class="n" x="750" y="77">3</text>
+    <text class="h" x="750" y="132">Independent QA</text>
+    <text class="s" x="750" y="160">The person who builds a</text>
+    <text class="s" x="750" y="182">feature doesn't sign off on it.</text>
+  </g>
+  <g>
+    <circle class="halo s4" cx="1050" cy="70" r="24"/>
+    <circle class="node" cx="1050" cy="70" r="24"/>
+    <text class="n" x="1050" y="77">4</text>
+    <text class="h" x="1050" y="132">Scope changes flagged</text>
+    <text class="s" x="1050" y="160">You hear about it in writing</text>
+    <text class="s" x="1050" y="182">before we build.</text>
+  </g>
+</svg>

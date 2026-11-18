@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-labelledby="t d">
+  <title id="t">TrustEngineers. Engineering built on trust.</title>
+  <desc id="d">Animated banner: the TrustEngineers logo, the tagline, and a rotating list of what the team builds: AI applications, interactive 3D web, full-stack products, and AI training and evaluation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071229"/>
+      <stop offset="1" stop-color="#0a1833"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8aaeff"/>
+      <stop offset="1" stop-color="#ff6b6b"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1f46c9" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#5b8cff"/>
+      <stop offset="1" stop-color="#1f46c9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b00000" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#ff3b3b"/>
+      <stop offset="1" stop-color="#b00000" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+    <clipPath id="card"><rect width="1200" height="360" rx="22"/></clipPath>
+    <clipPath id="ticker"><rect x="296" y="222" width="760" height="44"/></clipPath>
+  </defs>
+
+  <style>
+    text { font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+    .glow-a { animation: drift-a 14s ease-in-out infinite alternate; }
+    .glow-b { animation: drift-b 18s ease-in-out infinite alternate; }
+    .glow-c { animation: drift-c 16s ease-in-out infinite alternate; }
+    .ribbon { fill: none; stroke-linecap: round; stroke-dasharray: 260 1340; animation: flow 9s linear infinite; }
+    .ribbon.r2 { animation-duration: 12s; animation-delay: -4s; }
+    .ribbon.r3 { animation-duration: 15s; animation-delay: -9s; }
+    .dot { animation: twinkle 4s ease-in-out infinite; }
+    .dot:nth-of-type(2n) { animation-delay: -1.3s; }
+    .dot:nth-of-type(3n) { animation-delay: -2.6s; }
+    .ring { transform-box: fill-box; transform-origin: center; animation: pulse 3.2s ease-in-out infinite; }
+    .ring.r { animation-delay: -1.6s; }
+    .phrase { opacity: 0; animation: tick 12s cubic-bezier(.2,.7,.2,1) infinite; }
+    .phrase.p1 { opacity: 1; }
+    .phrase.p2 { animation-delay: -9s; }
+    .phrase.p3 { animation-delay: -6s; }
+    .phrase.p4 { animation-delay: -3s; }
+    .caret { animation: blink 1s steps(1) infinite; }
+    .rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+    .rise.d1 { animation-delay: .15s; }
+    .rise.d2 { animation-delay: .3s; }
+    .rise.d3 { animation-delay: .45s; }
+
+    @keyframes drift-a { from { transform: translate(0, 0); } to { transform: translate(90px, 40px); } }
+    @keyframes drift-b { from { transform: translate(0, 0); } to { transform: translate(-110px, -30px); } }
+    @keyframes drift-c { from { transform: translate(0, 0); } to { transform: translate(60px, -50px); } }
+    @keyframes flow { from { stroke-dashoffset: 1600; } to { stroke-dashoffset: 0; } }
+    @keyframes twinkle { 0%, 100% { opacity: .15; } 50% { opacity: .7; } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes tick {
+      0% { opacity: 0; transform: translateY(18px); }
+      4%, 21% { opacity: 1; transform: translateY(0); }
+      25%, 100% { opacity: 0; transform: translateY(-18px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+
+    <!-- Soft color glows that drift slowly -->
+    <g filter="url(#blur)">
+      <circle class="glow-a" cx="180" cy="60" r="150" fill="#285adc" opacity=".55"/>
+      <circle class="glow-b" cx="1060" cy="320" r="170" fill="#c80000" opacity=".32"/>
+      <circle class="glow-c" cx="760" cy="20" r="120" fill="#466eff" opacity=".3"/>
+    </g>
+
+    <!-- Ribbons: light running along three curves -->
+    <path class="ribbon" stroke="url(#blue)" stroke-width="3" d="M-40 300 C 220 220, 420 340, 660 270 S 1040 200, 1240 280"/>
+    <path class="ribbon r2" stroke="url(#red)" stroke-width="3" d="M-40 330 C 260 290, 480 350, 720 305 S 1060 260, 1240 320"/>
+    <path class="ribbon r3" stroke="url(#blue)" stroke-width="2" opacity=".7" d="M-40 60 C 240 20, 520 100, 780 50 S 1080 10, 1240 70"/>
+
+    <!-- Faint node field on the right -->
+    <g fill="#8aaeff">
+      <circle class="dot" cx="930" cy="70" r="2.5"/>
+      <circle class="dot" cx="990" cy="110" r="2"/>
+      <circle class="dot" cx="1050" cy="64" r="2.5"/>
+      <circle class="dot" cx="1110" cy="120" r="2"/>
+      <circle class="dot" cx="1140" cy="60" r="2"/>
+      <circle class="dot" cx="1020" cy="170" r="2.5"/>
+      <circle class="dot" cx="1090" cy="200" r="2"/>
+      <circle class="dot" cx="960" cy="190" r="2"/>
+      <circle class="dot" cx="1150" cy="180" r="2.5"/>
+    </g>
+    <g stroke="#8aaeff" stroke-opacity=".16" stroke-width="1" fill="none">
+      <path d="M930 70 L990 110 L1050 64 L1110 120 L1140 60"/>
+      <path d="M990 110 L1020 170 L1090 200 L1150 180 L1110 120"/>
+      <path d="M960 190 L1020 170"/>
+    </g>
+
+    <!-- Logo mark: T and reversed E, each with a ring head -->
+    <g class="rise" transform="translate(64 84)">
+      <g transform="scale(3)">
+        <g fill="none" stroke-width="4.5">
+          <circle class="ring" cx="19" cy="15" r="7" stroke="#ffffff"/>
+          <circle class="ring r" cx="44" cy="15" r="7" stroke="#ff4d4d"/>
+        </g>
+        <g fill="#ffffff">
+          <rect x="5" y="26" width="27" height="7" rx="3.5"/>
+          <rect x="15" y="26" width="8" height="31" rx="4"/>
+        </g>
+        <g fill="#ff4d4d">
+          <rect x="33" y="26" width="26" height="7" rx="3.5"/>
+          <rect x="51" y="26" width="8" height="31" rx="3.5"/>
+          <rect x="36" y="38" width="23" height="7" rx="3.5"/>
+          <rect x="33" y="50" width="26" height="7" rx="3.5"/>
+        </g>
+      </g>
+    </g>
+
+    <g class="rise d1">
+      <text x="296" y="142" font-size="68" font-weight="700" letter-spacing="-1.5" fill="#eef2fb">Trust<tspan fill="url(#brand)">Engineers</tspan></text>
+    </g>
+    <g class="rise d2">
+      <text x="298" y="194" font-size="27" font-weight="500" fill="#cfd8ea">Engineering built on trust.</text>
+    </g>
+
+    <!-- Rotating line: what we build -->
+    <g class="rise d3">
+      <g clip-path="url(#ticker)" font-size="25" font-weight="600" fill="#8aaeff">
+        <text class="phrase p1" x="298" y="252">AI applications that work in production</text>
+        <text class="phrase p2" x="298" y="252">Interactive 3D in the browser</text>
+        <text class="phrase p3" x="298" y="252">Full-stack products from one codebase</text>
+        <text class="phrase p4" x="298" y="252">Senior engineers for AI training and evaluation</text>
+      </g>
+      <rect class="caret" x="280" y="230" width="4" height="26" rx="2" fill="#ff6b6b"/>
+    </g>
+
+    <g class="rise d3" font-size="17" fill="#a8b4cc">
+      <text x="298" y="308">Since 2015  ·  Murrieta, California  ·  Clients in the US and worldwide</text>
+    </g>
+
+    <rect x=".5" y=".5" width="1199" height="359" rx="21.5" fill="none" stroke="#8caaeb" stroke-opacity=".18"/>
+  </g>
+</svg>
