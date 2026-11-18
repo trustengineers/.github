@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://trustengineers.space">
-    <img src="https://raw.githubusercontent.com/trustengineers/.github/main/profile/assets/hero.svg" width="100%" alt="TrustEngineers. Engineering built on trust. AI applications, interactive 3D web, full-stack products, and senior engineers for AI training and evaluation. Since 2015, Murrieta, California.">
+    <img src="https://raw.githubusercontent.com/trustengineers/.github/main/profile/assets/hero.svg?v=2" width="100%" alt="TrustEngineers. Engineering built on trust. AI applications, interactive 3D web, full-stack products, and senior engineers for AI training and evaluation. Since 2015, Murrieta, California.">
   </a>
 </p>
 
